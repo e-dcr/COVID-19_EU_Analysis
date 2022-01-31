@@ -3,9 +3,7 @@ rm(list=ls())
 
 library(readr)
 library(tidyverse)
-## "/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data/COVID_data_EU.csv"
-## "C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data/COVID_data_EU.csv"
-COVID_EU_GEN2020_AUGUST2021 <- read_csv("C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data/COVID_data_EU.csv", 
+COVID_EU_GEN2020_AUGUST2021 <- read_csv(".../COVID_data_EU.csv", 
                      col_types = cols(Date = col_date(format = "%m/%d/%y"), 
                                       France_recovered = col_number(),
                                       Germany_recovered = col_number(),
@@ -81,7 +79,4 @@ increase_recovered_EU[increase_recovered_EU<0]=0
 
 ##Daily rate dataset:
 Daily_increase <- data.frame (Date, increase_testing_EU, increase_cases_EU,  increase_death_EU, increase_recovered_EU )
-write.csv(Daily_increase, file="C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_increase_EU.csv", row.names = FALSE) 
-
-##"C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_increase_EU.csv"
-##"/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data_intermediate/daily_increase_EU.csv"
+write.csv(Daily_increase, file=".../daily_increase_EU.csv", row.names = FALSE) 
