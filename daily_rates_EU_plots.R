@@ -3,9 +3,7 @@ rm(list=ls())
 
 library(readr)
 library(tidyverse)
-## "/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data_intermediate/daily_rate_EU.csv"
-##"C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_rate_EU.csv"
-time_series_Covid_19 <- read_csv("/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data_intermediate/daily_rate_EU.csv",
+time_series_Covid_19 <- read_csv(".../daily_rate_EU.csv",
                                  col_types = cols(Date = col_date(format = "%Y-%m-%d"),
                                                   Incident_rate_FR = col_number(),
                                                   Incident_rate_GE = col_number(),
@@ -32,9 +30,7 @@ time_series_Covid_19 <- read_csv("/Users/eleonoradicarluccio/Desktop/Practicum/E
                                                   Mortality_rate_UK = col_number()))
                                                   
 ###draw a plot by 2*2
-##"/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/Figs/plot_daily_rates_EU.pdf"
-##"C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/Figs/plot_daily_rates_EU.pdf"
-filename <- sprintf("/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/Figs/plot_daily_rates_EU.pdf")
+filename <- sprintf(".../plot_daily_rates_EU.pdf")
 pdf(file = filename, height=15, width=20) #, horizontal = T)
 par(mfrow=c(2,2)) 
 
