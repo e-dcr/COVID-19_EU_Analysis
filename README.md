@@ -7,8 +7,8 @@ The COVID_data_EU.csv dataset was made by manually taking the relevant informati
 Substantial recovery data from The United Kingdom and Spain is missing.
 
 Population sizes:
-France_population     <-  65273511
-Germany_population    <-  83783942
+//France_population     <-  65273511
+//Germany_population    <-  83783942
 Italy_population      <-  60461826
 Spain_population      <-  46754778
 UK_population         <-  67886011
