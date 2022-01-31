@@ -5,9 +5,7 @@ library(readr)
 library(tidyverse)
 ### install.packages('zoo')
 require(zoo)
-## "/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data/COVID_data_EU.csv"
-## "C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data/COVID_data_EU.csv"
-COVID_EU_GEN2020_AUGUST2021 <- read_csv("C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data/COVID_data_EU.csv", 
+COVID_EU_GEN2020_AUGUST2021 <- read_csv(".../COVID_data_EU.csv", 
                      col_types = cols(Date = col_date(format = "%m/%d/%y"), 
                                       France_recovered = col_number(),
                                       Germany_recovered = col_number(),
@@ -33,7 +31,7 @@ COVID_EU_GEN2020_AUGUST2021 <- read_csv("C:/GUMC/Teaching/Practicum_projects/202
                                       Spain_deaths = col_number(),
                                       UK_deaths = col_number()))
 
-##Population size (refer to READ_ME.docx)
+##Population size (refer to READ_ME.md)
 France_population <- 65273511
 Germany_population <- 83783942
 Italy_population <- 60461826
@@ -85,7 +83,4 @@ Mortality_rate_UK <- COVID_EU$UK_deaths/COVID_EU$UK_cases*100
 Mortality_rate_EU <- data.frame(Mortality_rate_FR ,Mortality_rate_GE,Mortality_rate_IT,Mortality_rate_SP,Mortality_rate_UK)
 ##Daily rate dataset:
 Daily_rates <- data.frame (Date, Incident_rate_EU, Recovered_Rate_EU, Testing_rate_EU, Mortality_rate_EU)
-write.csv(Daily_rates, file="C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_rate_EU.csv", row.names = FALSE) 
-
-##"C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_rate_EU.csv"
-##"/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data_intermediate/daily_rate_EU.csv"
+write.csv(Daily_rates, file=".../daily_rate_EU.csv", row.names = FALSE) 
