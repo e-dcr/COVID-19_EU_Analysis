@@ -1,11 +1,9 @@
 ### clean up by removing all variables
 rm(list=ls())
 
-## "/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/data_intermediate/daily_increase_EU.csv"
-## "C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_increase_EU.csv"
 library(readr)
 library(tidyverse)
-daily_increase_EU <- read_csv("C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/data_intermediate/daily_increase_EU.csv",
+daily_increase_EU <- read_csv(".../daily_increase_EU.csv",
                                  col_types = cols(Date = col_date(format = "%Y-%m-%d"),
                                                   increase_testing_FR = col_number(),
                                                   increase_testing_GE = col_number(),
@@ -32,9 +30,7 @@ daily_increase_EU <- read_csv("C:/GUMC/Teaching/Practicum_projects/2020/Eleonora
                                                   increase_recovered_UK= col_number()))
 
 ###draw a plot by 2*2
-##"/Users/eleonoradicarluccio/Desktop/Practicum/Eleonora_Di_Carluccio/Figs/plot_daily_increase_EU.pdf"
-##"C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/Figs/plot_daily_increase_EU.pdf"
-filename <- sprintf("C:/GUMC/Teaching/Practicum_projects/2020/Eleonora_Di_Carluccio/Figs/plot_daily_increase_EU.pdf")
+filename <- sprintf(".../plot_daily_increase_EU.pdf")
 pdf(file = filename, height=15, width=20) #, horizontal = T)
 par(mfrow=c(2,2)) 
 
