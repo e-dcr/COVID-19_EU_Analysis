@@ -3,6 +3,8 @@ rm(list=ls())
 
 library(readr)
 library(tidyverse)
+### install.packages('zoo')
+require(zoo)
 COVID_EU_GEN2020_AUGUST2021 <- read_csv(".../COVID_data_EU.csv", 
                      col_types = cols(Date = col_date(format = "%m/%d/%y"), 
                                       France_recovered = col_number(),
